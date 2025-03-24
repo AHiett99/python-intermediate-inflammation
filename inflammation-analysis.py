@@ -14,8 +14,8 @@ def main(args):
     - passing data between models and views
     """
     infiles = args.infiles
-    if not isinstance(InFiles, list):
-        InFiles = [args.infiles]
+    if not isinstance(infiles, list):
+        infiles = [args.infiles]
 
     for filename in infiles:
         inflammation_data = models.load_csv(filename)
