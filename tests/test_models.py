@@ -6,6 +6,14 @@ import numpy.testing as npt
 from inflammation.models import daily_mean
 from inflammation.models import daily_min
 
+import pytest
+...
+def test_daily_min_string():
+    """Test for TypeError when passing strings"""
+
+    with pytest.raises(TypeError):
+        error_expected = daily_min([['Hello', 'there'], ['General', 'Kenobi']])
+
 def test_daily_mean_zeros():
     """Test that mean function works for an array of zeros."""
 
